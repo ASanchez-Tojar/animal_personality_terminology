@@ -20,7 +20,7 @@
 # Packages needed
 ################################################################################
 
-pacman::p_load(openxlsx)
+pacman::p_load(openxlsx,stringr)
 
 # Clear memory
 rm(list=ls())
@@ -40,17 +40,47 @@ rm(list=ls())
 data <- read.xlsx("screening/ten_journals/ten_journals_fulltext_screening.xlsx",
                          colNames=T,sheet = 1)
 
+################################################################################
+# Preparing dataset
+################################################################################
+
+# title-and-abstract decision
+data$t.and.a_decision <- ifelse(str_detect(data$notes, "Included"),
+                                "yes","no")
+data$t.and.a_decision <- as.factor(data$t.and.a_decision)
+
+# extracting exclusion reasons
+t.and.a_exclusion_reason <- data$notes %>% str_match("RAYYAN-EXCLUSION-REASONS: (\\X+)")
+
+data$t.and.a_exclusion_reason <- t.and.a_exclusion_reason[,2]
+
+
+# creating variables for the fulltext screening and data extraction phase
+data$fulltext_decision <- ""
+data$fulltext_exclusion_reason <- ""
+data$personality_definition <- ""
+data$personality_definition_context <- ""
+data$personality_interpretation <- "" #levels: among-individual, within-individual, both
+data$repeatability_interpretation <- "" #levels: yes, no
+data$repeatability_interpretation_context <- "" #copy interpretation sentence
+data$individual_level_association <- "" #levels: yes, no
+data$individual_level_association_method <- "" #levels: univariate, bivariate, correlation, among-subject centring
+data$repetability_comparison <- "" #levels: yes, no
+data$unstandardize_variance <- "" #levels: yes, no
+data$comments <- ""
+
+
 ##############################################################
 # Creating output
 ##############################################################
 
-write.xlsx(XXX,
+write.xlsx(data,
            "screening/ten_journals/ten_journals_fulltext_screening_and_data_extraction.xlsx",
            sheetName="Sheet1",col.names=TRUE, row.names=F,
            append=FALSE, showNA=TRUE, password=NULL)
 
 #remember to manually remove the quotes for the column names only in the .csv file
 
-sink("literature_search/ten_journals/screening_process_Rpackages_session.txt")
+sink("screening/ten_journals/screening_process_Rpackages_session.txt")
 sessionInfo()
 sink()
