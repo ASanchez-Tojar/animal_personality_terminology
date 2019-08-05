@@ -12,7 +12,9 @@
 # Description of script and Instructions
 ################################################################################
 
-# This script is to 
+# This script is to prepare the reference data of a search including the 30 most
+# cited papers on "animal personality" for importing into rayyan and performing
+# title-and-abstract screening.
 
 ################################################################################
 # Packages needed
