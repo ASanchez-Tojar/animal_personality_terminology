@@ -1,4 +1,3 @@
-
 ################################################################################
 # Authors: 
 # Alfredo Sanchez-Tojar (alfredo.tojar@gmail.com)
@@ -59,11 +58,17 @@ data$t.and.a_exclusion_reason <- t.and.a_exclusion_reason[,2]
 data$fulltext_decision <- "" #levels: yes, no. Does it pass the fulltext screening or it is a non-empirical study that made it through the title-and-abstract screening?
 data$fulltext_exclusion_reason <- "" #if fulltext_decision=no, give a reason for that
 data$personality_definition <- "" #give the definition used by the authors, choose one among all the definitions we have already assembled, or, in case that it is a new one, provide it as it is
-data$personality_definition_context <- "" #some context copied from the paper regarding the definition
+data$personality_definition_context <- "" #some context copied from the paper regarding the definition, including the definition as estated in the paper
+data$personality_definition_references <- "" #references cited for the definition of animal personality
 data$personality_interpretation <- "" #levels: among-individual, within-individual, both. How is animal personality interpreted?
+data$personality_trait_definition <- "" #give the definition used by the authors, choose one among all the definitions we have already assembled, or, in case that it is a new one, provide it as it is
+data$personality_trait_definition_context <- "" #some context copied from the paper regarding the definition, including the definition as estated in the paper
+data$personality_trait_definition_references <- "" #references cited for the definition of personality trait
+data$personality_trait_interpretation <- "" #levels: among-individual, within-individual, both. How is animal personality interpreted?
 data$repeatability <- "" #levels: yes, no. Was repeatability measured?
 data$repeatability_interpretation <- "" #levels: yes, no. Was repeatability interpreted as individual consistency and/or predictability?
 data$repeatability_interpretation_context <- "" #some context copied from the paper regarding the definition
+data$repeatability_alternative <- "" #if repeatability was not estimated, what was estimated instead? (e.g. correlation?)
 data$individual_level_association <- "" #levels: yes, no. Did the paper study individual level association between behaviour and some other traits?
 data$individual_level_association_method <- "" #levels: univariate, bivariate, correlation, among-subject centring. If individual_level_association=yes, which method was used?
 data$repetability_comparison <- "" #levels: yes, no. Did the authors compare repeatability estimates between different groups of animals?
