@@ -20,7 +20,7 @@
 # Packages needed
 ################################################################################
 
-pacman::p_load(revtools)
+pacman::p_load(revtools,stringr)
 
 # Clear memory
 rm(list=ls())
@@ -115,6 +115,39 @@ write.csv(db.refs.rayyan,
 
 #remember to manually remove the quotes for the column names only in the .csv file
 
+
+##############################################################
+# Generating list of corresponding authors' emails
+##############################################################
+
+# importing .bib file
+db.all.refs.1 <- read_bibliography("literature_search/all_journals/animal_personality_1.bib")
+db.all.refs.2 <- read_bibliography("literature_search/all_journals/animal_personality_2.bib")
+db.all.refs.3 <- read_bibliography("literature_search/all_journals/animal_personality_3.bib")
+
+# creating vector with list of unique components
+cor.aut <- unique(unlist(c(db.all.refs.1$author.email,db.all.refs.2$author.email,db.all.refs.3$author.email)))
+
+# split multiple corresponding authors to create a full list of corresponding authors, and make it unique
+cor.aut.1 <- unique(unlist(strsplit(cor.aut, " ")))
+
+# all to lower to be able to find unique emails
+cor.aut.2 <- unique(str_to_lower(cor.aut.1))
+
+# remove NA
+cor.aut.3 <- cor.aut.2[!is.na(cor.aut.2)]
+
+# remove // from some emails
+cor.aut.4 <- gsub(cor.aut.3, pattern="\\_", replacement="_", fixed=TRUE)
+
+# sort
+cor.aut.5 <- sort(cor.aut.4)
+
+# printing each list with no more than 500 emails as that is the maximum allowed by gmail
+paste(as.character(cor.aut.5[1:500]), collapse=",")
+paste(as.character(cor.aut.5[501:length(cor.aut.5)]), collapse=",")
+
+# R session
 sink("literature_search/ten_journals/screening_process_Rpackages_session.txt")
 sessionInfo()
 sink()
