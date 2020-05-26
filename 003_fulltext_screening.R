@@ -75,6 +75,7 @@ data$repeatability_consist_predict_context <- "" #some context copied from the p
 # data$individual_level_association_method <- "" #levels: univariate, bivariate, correlation, among-subject centring. If individual_level_association=yes, which method was used?
 data$repetability_comparison <- "" #levels: yes (only applies within the study, i.e. if they measure repeatability in >1 group, and compare it), no, NA.
 data$repetability_comparison_interpretation <- "" #levels: among-individual, within-individual, both, none, NA. How do the authors interpret the comparison between the repeatabilities of two or more groups?
+data$repetability_comparison_interpretation_context <- "" #some context copied from the paper regarding the interpretation of comparing repeatabilities
 data$unstandardize_variance <- "" #levels: yes, no, NA. Are the raw variance estimates available or only the variance standardized (i.e. repeatability)?
 data$comments <- "" #comments  
 
@@ -107,13 +108,13 @@ data.t.and.a.passed.2015on.random <- data.t.and.a.passed.2015on[sample(1:nrow(da
 # round(154/3,0)
 
 # subsets per observer ~ round(154/3,0) + round((154*0.25)/3,0) refs, with some overlapping
-data.MM <- data.t.and.a.passed[c(1:64),]
+data.MM <- data.t.and.a.passed.2015on.random[c(1:64),]
 data.MM$observer <- "MM"
 
-data.AST <- data.t.and.a.passed[c(52:116),]
+data.AST <- data.t.and.a.passed.2015on.random[c(52:125),]
 data.AST$observer <- "AST"
 
-data.PN <- data.t.and.a.passed[c(1:13,104:154),]
+data.PN <- data.t.and.a.passed.2015on.random[c(1:13,113:154),]
 data.PN$observer <- "PN"
 
 
