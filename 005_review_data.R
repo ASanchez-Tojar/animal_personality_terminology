@@ -201,7 +201,7 @@ summary(full[full$repeatability=="yes" & !(is.na(full$repeatability)),c("studyID
                                                                         "unstandardize_variance.2",
                                                                         "observer")])
 
-# needs double-checking
+# needs double-checking: none!
 full[full$repeatability=="yes" & !(is.na(full$repeatability)) & is.na(full$repeatability_consist_predict),
      c("studyID","repeatability",
        "repeatability_interpretation",
@@ -234,4 +234,12 @@ full.counts <- merge(full,counts,by="studyID",all.x=T)
 
 
 # sorting by times.extracted to make it easy
-full.counts <- arrange(full.counts,-times.extracted,studyID)
+full.counts <- arrange(full.counts,-times.extracted,studyID,observer)
+
+
+############################################################
+# exporting clean dataset
+############################################################
+
+# exporting data
+write.csv(full.counts,"data/ten_journals/combined/ten_journals_fulltext_screening_and_data_extraction_combined.csv",row.names=FALSE)
