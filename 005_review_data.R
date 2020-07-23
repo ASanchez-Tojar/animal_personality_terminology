@@ -242,4 +242,7 @@ full.counts <- arrange(full.counts,-times.extracted,studyID,observer)
 ############################################################
 
 # exporting data
-write.csv(full.counts,"data/ten_journals/combined/ten_journals_fulltext_screening_and_data_extraction_combined.csv",row.names=FALSE)
+write.xlsx(full.counts,
+           "data/ten_journals/combined/ten_journals_fulltext_screening_and_data_extraction_combined.xlsx",
+           sheetName="Sheet1",col.names=TRUE, row.names=F,
+           append=FALSE, showNA=TRUE, password=NULL)
