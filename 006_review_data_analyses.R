@@ -1,3 +1,4 @@
+
 ################################################################################
 # Authors: 
 # Alfredo Sanchez-Tojar (alfredo.tojar@gmail.com)
@@ -54,3 +55,65 @@ combined.data <- read.xlsx("data/ten_journals/combined/ten_journals_fulltext_scr
 # paper, which is not important for the analyses, but will be kept as such in
 # the non-duplicated dataset for the sake of transparency and reproducibility.
 
+# for that, lets remove columns that are not of interest for the analyses, this
+# will make everything else easier
+
+combined.data.reduced <- as.data.frame(combined.data %>% 
+                                         select(-title,-volume,-issue,-pages,
+                                                -authors,-abstract,-t.and.a_exclusion_reason,
+                                                -repeatability_interpretation_context,
+                                                -repeatability_consist_predict_context,
+                                                -repetability_comparison_interpretation_context,
+                                                -unstandardize_variance,-comments,-observer,
+                                                -conflict_resolution_notes,-times.extracted))
+
+# formatting variables
+combined.data.reduced$studyID <- as.factor(combined.data.reduced$studyID)
+combined.data.reduced$journal <- as.factor(combined.data.reduced$journal)
+combined.data.reduced$t.and.a_decision <- as.factor(combined.data.reduced$t.and.a_decision)
+combined.data.reduced$fulltext_decision <- as.factor(combined.data.reduced$fulltext_decision)
+combined.data.reduced$fulltext_exclusion_reason <- as.factor(combined.data.reduced$fulltext_exclusion_reason)
+combined.data.reduced$repeatability <- as.factor(combined.data.reduced$repeatability)
+combined.data.reduced$repeatability_interpretation <- as.factor(combined.data.reduced$repeatability_interpretation)
+combined.data.reduced$repeatability_consist_predict <- as.factor(combined.data.reduced$repeatability_consist_predict)
+combined.data.reduced$repetability_comparison <- as.factor(combined.data.reduced$repetability_comparison)
+combined.data.reduced$repetability_comparison_interpretation <- as.factor(combined.data.reduced$repetability_comparison_interpretation)
+combined.data.reduced$unstandardize_variance.2 <- as.factor(combined.data.reduced$unstandardize_variance.2)
+
+summary(combined.data.reduced)
+
+# deleting duplicated rows, which in principle should (and does) work to randomly
+# delete those that were extracted twice for quality control
+combined.data.reduced.dedup <- unique(combined.data.reduced)
+
+summary(combined.data.reduced.dedup)
+
+# excluding references that did not pass the fulltext screening or that did not
+# estimate behavioural repeatability
+final.database <- combined.data.reduced.dedup %>% filter(fulltext_decision=="yes", repeatability=="yes")
+
+
+################################################################################
+# Some summary statistics
+################################################################################
+
+# year distribution
+table(final.database$year)
+
+# journal distribution
+table(final.database$journal)
+
+# repeatability interpretation
+table(final.database$repeatability_interpretation)
+
+# is repeatability interpreted as individual predictability and/or consistency?
+table(final.database$repeatability_consist_predict) 
+
+# repeatability of two or more groups compared
+table(final.database$repetability_comparison) 
+
+# when repeatability of two o rmore groups compared, what is the interpretation?
+table(final.database$repetability_comparison_interpretation)
+
+# do the authors report unstandardize variance components in addition to the repeatability values?
+table(final.database$unstandardize_variance.2)
