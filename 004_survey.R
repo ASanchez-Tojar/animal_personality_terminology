@@ -80,7 +80,10 @@ data.red <- rename(data.red,
 # career stage
 ################################################################################
 
-table(data.red$career.stage) #think of excluding: I am not a researcher
+table(data.red$career.stage)
+
+# excluding career.stage identified as "I am not a researcher" from here on
+data.red <- data.red[data.red$career.stage!="I am not a researcher",]
 
 
 ################################################################################
@@ -116,7 +119,8 @@ data.red$country <- recode(data.red$country,
                            england = "UK",
                            .default = levels(data.red$country))
 
-table(data.red$country) # 38 countries
+table(data.red$country) 
+length(unique(data.red$country)) # 38 countries
 
 ################################################################################
 # generating a database with country data so that we can create an interactive map using eviatlas
@@ -171,6 +175,9 @@ data.red$personality.definition.2 <- ifelse(data.red$personality.definition %in%
 table(data.red$personality.definition.2)
 
 
+table(data.red[!(data.red$personality.definition %in% personality.definition.replies),"personality.definition"])
+
+
 ################################################################################
 # personality interpretation
 ################################################################################
@@ -182,12 +189,22 @@ personality.interpretation.replies <- c("a) Limited phenotypic plasticity in beh
                                         "c) Both a) and b) are correct",
                                         "d) I do not know the answer")
 
+# after reviewing the "other" category, some do actually correspond to pre-defined categories
+# therefore, we are adding those back to were they belong
+
+data.red <- mutate(data.red, personality.interpretation = fct_recode(personality.interpretation,
+                                                                     "c) Both a) and b) are correct" = "A and B combined",
+                                                                     "d) I do not know the answer" = "a) is not correct because personality does not prevent plasticity; it only reduces I x E. b) is not very feasible as you need within-individual variance to know that individual differ in their average expression. So I do not really know what to answer here.",
+                                                                     "d) I do not know the answer" = "I'm not sure what 'represent biologically' means. A mechanism? An evolutionary optimum? An evolutionary constraint? There are many hypotheses to explain personality."))
+
 # creating a new variable so that additional replies are labelled as "others"
 data.red$personality.interpretation.2 <- ifelse(data.red$personality.interpretation %in% personality.interpretation.replies,
                                                 as.character(data.red$personality.interpretation),
                                                 "other")
 
 table(data.red$personality.interpretation.2)
+
+table(data.red[!(data.red$personality.interpretation %in% personality.interpretation.replies),"personality.interpretation"])
 
 
 ################################################################################
@@ -200,6 +217,17 @@ repeatability.interpretation.replies <- c("a) (Relative) amount of phenotypic pl
                                           "b) (Relative) amount of individual differences in average trait expression in a sample of individuals",
                                           "c) Both a) and b) are correct",
                                           "d) I do not know the answer")
+
+# after reviewing the "other" category, some do actually correspond to pre-defined categories
+# therefore, we are adding those back to were they belong
+# for those that say that none of the asnwers are correct but do not provide an alternative we are marking them as "d) I do not know the answer"
+
+data.red <- mutate(data.red, repeatability.interpretation = fct_recode(repeatability.interpretation,
+                                                                       "b) (Relative) amount of individual differences in average trait expression in a sample of individuals" = "B, but at a specific value of the environment",
+                                                                       "b) (Relative) amount of individual differences in average trait expression in a sample of individuals" = "Note that technically it's (b), but this means that regarding plasticity itself as a trait then (a) must also then apply.",
+                                                                       "d) I do not know the answer" = "Neither a or b are correct",
+                                                                       "d) I do not know the answer" = "None are correct. For the same reasons as quest 2."))
+
 
 # creating a new variable so that additional replies are labelled as "others"
 data.red$repeatability.interpretation.2 <- ifelse(data.red$repeatability.interpretation %in% repeatability.interpretation.replies,
@@ -226,6 +254,7 @@ repeatability.comparison.replies <- c("a) Group “A” expresses less plasticit
                                       "c) Both interpretations a) and b) can be made",
                                       "d) Neither interpretations a) nor b) can be made",
                                       "e) I do not know the answer")
+
 
 # creating a new variable so that additional replies are labelled as "others"
 data.red$repeatability.comparison.2 <- ifelse(data.red$repeatability.comparison %in% repeatability.comparison.replies,
@@ -260,13 +289,23 @@ personality.data.replies <- c("a) A single behavioural measurement per individua
                               "e) Both b) and c) are correct",
                               "f) I do not know")
 
-# creating a new variable so that additional replies are labelled as "others"
-data.red$personality.data.2 <- ifelse(data.red$personality.data %in% personality.data.replies,
-                                      as.character(data.red$personality.data),
-                                      "other")
+# after reviewing the "other" category, some do actually correspond to pre-defined categories
+# therefore, we are adding those back to were they belong
 
-table(data.red$personality.data.2)
+data.red <- mutate(data.red, personality.data = fct_recode(personality.data,
+                                                           "a) A single behavioural measurement per individual" = "Opción 1",
+                                                           "c) Repeated behavioural measurements per individual" = "Repeated behavioural measurements per individual"))
 
+
+
+# # creating a new variable so that additional replies are labelled as "others"
+# data.red$personality.data.2 <- ifelse(data.red$personality.data %in% personality.data.replies,
+#                                       as.character(data.red$personality.data),
+#                                       "other")
+# 
+# table(data.red$personality.data.2)
+
+table(data.red$personality.data)
 
 ################################################################################
 # personality data
