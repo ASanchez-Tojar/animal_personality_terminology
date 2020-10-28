@@ -12,7 +12,11 @@
 ################################################################################
 
 # This script is to import each of the observer's dataset with the extracted
-# data, put them together, and explore disagreement between observers.
+# data, put them together, and explore disagreement between observers. It creates
+# a combined file that will be reviewed and corrected outside R, i.e. the file
+# created is not the file to be used for the analyses. The next script, i.e. 
+# 006_review_data_analysis.R will take care of importing the final file and
+# analyze it.
 
 
 ################################################################################
