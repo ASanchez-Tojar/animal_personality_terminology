@@ -269,11 +269,17 @@ table(data.red$repeatability.comparison.2)
 ################################################################################
 table(data.red$single.measurements)
 
+table(data.red[data.red$personality.experience %in% c("Yes, as a co-author","Yes, as a lead, corresponding or senior author"),
+               "single.measurements"])
+
 
 ################################################################################
 # unpartitioned data
 ################################################################################
 table(data.red$unpartitioned.data)
+
+table(data.red[data.red$personality.experience %in% c("Yes, as a co-author","Yes, as a lead, corresponding or senior author"),
+               "unpartitioned.data"])
 
 
 ################################################################################
