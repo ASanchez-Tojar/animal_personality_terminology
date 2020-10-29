@@ -92,6 +92,11 @@ summary(combined.data.reduced.dedup)
 final.database <- combined.data.reduced.dedup %>% filter(fulltext_decision=="yes", repeatability=="yes")
 
 
+# saving dataset for creating figures in script 007_survey_vs_review.R
+write.csv(final.database,
+          "data/ten_journals/combined/ten_journals_fulltext_screening_and_data_extraction_combined_conflict_resolving_reformatted.csv",row.names=FALSE)
+
+
 ################################################################################
 # Some summary statistics
 ################################################################################
