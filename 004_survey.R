@@ -325,12 +325,16 @@ table(data.red$comments)
 
 # converting all these variables to factors
 variables.as.factors <- c("country","personality.definition.2","personality.interpretation.2",
-                          "repeatability.interpretation.2","repeatability.comparison.2","personality.data.2")
+                          "repeatability.interpretation.2","repeatability.comparison.2")
 
 data.red[variables.as.factors] <- lapply(data.red[variables.as.factors], factor)
 
 summary(data.red)
 
+
+# saving dataset for creating figures in script 007_survey_vs_review.R
+write.csv(data.red,
+          "data/survey/understanding_personality_survey_results_reformatted.csv",row.names=FALSE)
 
 ################################################################################
 # Figures
