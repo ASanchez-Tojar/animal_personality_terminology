@@ -199,24 +199,19 @@ gtsave(tableS8,filename="tableS8.png", path="./tables/")
 ################################################################################
 table(data.red$single.measurements)
 
-table(data.red[data.red$personality.experience %in% c("Yes, as a co-author","Yes, as a lead, corresponding or senior author"),
-               "single.measurements"])
-
 
 ################################################################################
 # unpartitioned data
 ################################################################################
 
-table(data.red[data.red$personality.experience %in% c("Yes, as a co-author","Yes, as a lead, corresponding or senior author"),
-               "personality.data"])
+table(data.red$unpartitioned.data)
 
 
 ################################################################################
 # personality data
 ################################################################################
 
-table(data.red[data.red$personality.experience %in% c("Yes, as a co-author","Yes, as a lead, corresponding or senior author"),
-               "personality.data"])
+table(data.red$personality.data)
 
 
 ################################################################################
