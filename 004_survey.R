@@ -18,7 +18,7 @@
 # Packages needed
 ################################################################################
 
-pacman::p_load(openxlsx,stringr,dplyr,tidyverse)
+pacman::p_load(openxlsx,stringr,dplyr,tidyverse,gt)
 
 # Clear memory
 rm(list=ls())
@@ -181,7 +181,28 @@ data.red$personality.definition.2 <- ifelse(data.red$personality.definition %in%
 table(data.red$personality.definition.2)
 
 
-table(data.red[!(data.red$personality.definition %in% personality.definition.replies),"personality.definition"])
+#table(data.red[!(data.red$personality.definition %in% personality.definition.replies),"personality.definition"])
+
+# creating table 1 summarizing the definitions from the questionnaire
+table1 <- data.red %>%
+  group_by(personality.definition.2) %>%
+  summarise(number=n()) %>% 
+  mutate(percentage=round(number/sum(number)*100,1)) %>%
+  arrange(desc(percentage)) %>%
+  mutate(combined = paste0(number," (",percentage,"%)")) %>%
+  select(-number,-percentage) %>%
+  mutate(personality.definition.2 = fct_recode(personality.definition.2, "Others (see Table S1)" = "other")) %>%
+  gt() %>%
+  cols_label(personality.definition.2=md("**Animal personality definition**"),
+             combined=md("**Number of times selected in the questionnaire (%)**")) %>%
+  cols_align(align = "left", columns=vars(personality.definition.2)) %>%
+  cols_align(align = "center", columns=vars(combined)) %>%
+  tab_options(table.width=775)
+
+table1
+
+gtsave(table1,filename="table1.png", path="./tables/")
+
 
 
 # creating table S1 containing all definitions contained in the others category
@@ -223,7 +244,28 @@ data.red$personality.interpretation.2 <- ifelse(data.red$personality.interpretat
 
 table(data.red$personality.interpretation.2)
 
-table(data.red[!(data.red$personality.interpretation %in% personality.interpretation.replies),"personality.interpretation"])
+
+# creating table 2 summarizing the interpreations from the questionnaire
+table2 <- data.red %>%
+  group_by(personality.interpretation.2) %>%
+  summarise(number=n()) %>% 
+  mutate(percentage=round(number/sum(number)*100,1)) %>%
+  arrange(desc(percentage)) %>%
+  mutate(combined = paste0(number," (",percentage,"%)")) %>%
+  select(-number,-percentage) %>%
+  mutate(personality.interpretation.2 = fct_recode(personality.interpretation.2, "e) Others (see Table S2)" = "other")) %>%
+  gt() %>%
+  cols_label(personality.interpretation.2=md("**Biological interpretation of animal personality**"),
+             combined=md("**Number of times selected in the questionnaire (%)**")) %>%
+  cols_align(align = "left", columns=vars(personality.interpretation.2)) %>%
+  cols_align(align = "center", columns=vars(combined)) %>%
+  tab_options(table.width=775)
+
+table2
+
+gtsave(table2,filename="table2.png", path="./tables/")
+
+#table(data.red[!(data.red$personality.interpretation %in% personality.interpretation.replies),"personality.interpretation"])
 
 # creating table S2 containing all interpretations contained in the others category
 tableS2 <- data.red[!(data.red$personality.interpretation %in% personality.interpretation.replies),"personality.interpretation"] %>% 
@@ -267,6 +309,26 @@ data.red$repeatability.interpretation.2 <- ifelse(data.red$repeatability.interpr
 
 table(data.red$repeatability.interpretation.2)
 
+# creating table 3 summarizing the interpreations from the questionnaire
+table3 <- data.red %>%
+  group_by(repeatability.interpretation.2) %>%
+  summarise(number=n()) %>% 
+  mutate(percentage=round(number/sum(number)*100,1)) %>%
+  arrange(desc(percentage)) %>%
+  mutate(combined = paste0(number," (",percentage,"%)")) %>%
+  select(-number,-percentage) %>%
+  mutate(repeatability.interpretation.2 = fct_recode(repeatability.interpretation.2, "e) Others (see Table S3)" = "other")) %>%
+  gt() %>%
+  cols_label(repeatability.interpretation.2=md("**Biological interpretation of repeatability**"),
+             combined=md("**Number of times selected in the questionnaire (%)**")) %>%
+  cols_align(align = "left", columns=vars(repeatability.interpretation.2)) %>%
+  cols_align(align = "center", columns=vars(combined)) %>%
+  tab_options(table.width=775)
+
+table3
+
+gtsave(table3,filename="table3.png", path="./tables/")
+
 # creating table S3 containing all interpretations contained in the others category
 tableS3 <- data.red[!(data.red$repeatability.interpretation %in% repeatability.interpretation.replies),"repeatability.interpretation"] %>% 
   as.data.frame() %>%
@@ -307,6 +369,25 @@ table(data.red$repeatability.comparison)
 data.red$repeatability.comparison.2 <- data.red$repeatability.comparison
 
 table(data.red$repeatability.comparison.2)
+
+# creating table 4 summarizing the interpreations from the questionnaire
+table4 <- data.red %>%
+  group_by(repeatability.comparison.2) %>%
+  summarise(number=n()) %>% 
+  mutate(percentage=round(number/sum(number)*100,1)) %>%
+  arrange(desc(percentage)) %>%
+  mutate(combined = paste0(number," (",percentage,"%)")) %>%
+  select(-number,-percentage) %>%
+  gt() %>%
+  cols_label(repeatability.comparison.2=md("**Biological interpretation of comparing repeatability estimates of two groups of animals**"),
+             combined=md("**Number of times selected in the questionnaire (%)**")) %>%
+  cols_align(align = "left", columns=vars(repeatability.comparison.2)) %>%
+  cols_align(align = "center", columns=vars(combined)) %>%
+  tab_options(table.width=775)
+
+table4
+
+gtsave(table4,filename="table4.png", path="./tables/")
 
 
 ################################################################################
