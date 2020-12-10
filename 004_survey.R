@@ -128,6 +128,42 @@ data.red$country <- recode(data.red$country,
 table(data.red$country) 
 length(unique(data.red$country)) # 38 countries
 
+
+################################################################################
+# Figure S4
+################################################################################
+
+# sort of histogram showing countries of affiliations of participants in the survey
+
+tiff("figures/FigureS4.tiff",
+     height=18, width=36,
+     units='cm', compression="lzw", res=600)
+
+figureS4 <- 
+  data.red %>%
+  mutate(country = fct_infreq(country)) %>%
+  group_by(country) %>% 
+  summarise(n = n()) %>% 
+  ggplot() + 
+  geom_bar(aes(y = n, x = country), 
+           stat="identity", position="dodge", colour = "white") +
+  labs(y="Frequency") +
+  scale_y_continuous(limits = c(0,75), breaks = seq(0,75,25),
+                     expand = expand_scale(mult = c(0, 0.05))) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.line = element_line(colour = "black"),
+        axis.title.x=element_blank(),
+        axis.title.y = element_text(size = 25,vjust = 9),
+        axis.text.x = element_text(size = 15, color="black",angle = 90,hjust = 1,vjust=0.4),
+        axis.text.y = element_text(size = 15),
+        plot.margin = unit(c(0.5,1,0.75,1.25), "cm"))
+
+figureS4
+
+dev.off()
+
 ################################################################################
 # generating a database with country data so that we can create an interactive map using eviatlas
 
