@@ -206,63 +206,31 @@ table(data.red[data.red$personality.experience %in% c("Yes, as a co-author","Yes
 ################################################################################
 # unpartitioned data
 ################################################################################
-table(data.red$unpartitioned.data)
 
 table(data.red[data.red$personality.experience %in% c("Yes, as a co-author","Yes, as a lead, corresponding or senior author"),
-               "unpartitioned.data"])
+               "personality.data"])
 
 
 ################################################################################
 # personality data
 ################################################################################
-table(data.red$personality.data)
 
-# pre-defined answers
-personality.data.replies <- c("a) A single behavioural measurement per individual",
-                              "b) A single behavioural measurement per individual if the focal behaviour is repeatable",
-                              "c) Repeated behavioural measurements per individual",
-                              "d) Three previous options are correct",
-                              "e) Both b) and c) are correct",
-                              "f) I do not know")
+table(data.red[data.red$personality.experience %in% c("Yes, as a co-author","Yes, as a lead, corresponding or senior author"),
+               "personality.data"])
 
-# after reviewing the "other" category, some do actually correspond to pre-defined categories
-# therefore, we are adding those back to were they belong
-
-data.red <- mutate(data.red, personality.data = fct_recode(personality.data,
-                                                           "a) A single behavioural measurement per individual" = "Opción 1",
-                                                           "c) Repeated behavioural measurements per individual" = "Repeated behavioural measurements per individual"))
-
-
-
-# # creating a new variable so that additional replies are labelled as "others"
-# data.red$personality.data.2 <- ifelse(data.red$personality.data %in% personality.data.replies,
-#                                       as.character(data.red$personality.data),
-#                                       "other")
-# 
-# table(data.red$personality.data.2)
-
-table(data.red$personality.data)
 
 ################################################################################
 # personality data
 ################################################################################
 table(data.red$comments)
 
+tableS9 <- data.red[!(is.na(data.red$comments)),"comments"] %>%
+  as.data.frame() %>%
+  gt() %>%
+  cols_label(.=md("**Comments from participants**")) %>%
+  cols_align(align = "left") %>%
+  tab_options(table.width=950)
 
-################################################################################
-# Further formatting
-################################################################################
+tableS9
 
-# converting all these variables to factors
-variables.as.factors <- c("country","personality.definition.2","personality.interpretation.2",
-                          "repeatability.interpretation.2","repeatability.comparison.2")
-
-data.red[variables.as.factors] <- lapply(data.red[variables.as.factors], factor)
-
-summary(data.red)
-
-
-# saving dataset for creating figures in script 007_survey_vs_review.R
-write.csv(data.red,
-          "data/survey/understanding_personality_survey_results_reformatted.csv",row.names=FALSE)
-
+gtsave(tableS9,filename="tableS9.png", path="./tables/")
