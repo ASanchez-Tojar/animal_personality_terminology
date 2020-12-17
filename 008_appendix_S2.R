@@ -215,8 +215,27 @@ table(data.red$personality.data)
 
 
 ################################################################################
-# personality data
+# comments
 ################################################################################
+
+# only from self-reported researchers in animal personality
+
+# table(data.red$comments)
+# 
+# tableS9 <- data.red[!(is.na(data.red$comments)),"comments"] %>%
+#   as.data.frame() %>%
+#   gt() %>%
+#   cols_label(.=md("**Comments from participants**")) %>%
+#   cols_align(align = "left") %>%
+#   tab_options(table.width=950)
+# 
+# tableS9
+# 
+# gtsave(tableS9,filename="tableS9.png", path="./tables/")
+
+# for all self-reported researchers
+data.red <- read.csv("data/survey/understanding_personality_survey_results_reformatted.csv",header=T,sep=",")
+
 table(data.red$comments)
 
 tableS9 <- data.red[!(is.na(data.red$comments)),"comments"] %>%
