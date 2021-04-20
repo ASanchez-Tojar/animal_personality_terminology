@@ -98,7 +98,7 @@ tableS5 <- data.red %>%
   group_by(personality.definition.2) %>%
   summarise(number=n()) %>% 
   mutate(percentage=round(number/sum(number)*100,1)) %>%
-  arrange(desc(percentage)) %>%
+  #arrange(desc(percentage)) %>%
   mutate(combined = paste0(number," (",percentage,"%)")) %>%
   select(-number,-percentage) %>%
   mutate(personality.definition.2 = fct_recode(personality.definition.2, "Others (see Table S1)" = "other")) %>%
@@ -123,7 +123,7 @@ tableS6 <- data.red %>%
   group_by(personality.interpretation.2) %>%
   summarise(number=n()) %>% 
   mutate(percentage=round(number/sum(number)*100,1)) %>%
-  arrange(desc(percentage)) %>%
+  #arrange(desc(percentage)) %>%
   mutate(combined = paste0(number," (",percentage,"%)")) %>%
   select(-number,-percentage) %>%
   mutate(personality.interpretation.2 = fct_recode(personality.interpretation.2, "e) Others (see Table S2)" = "other")) %>%
@@ -148,7 +148,7 @@ tableS7 <- data.red %>%
   group_by(repeatability.interpretation.2) %>%
   summarise(number=n()) %>% 
   mutate(percentage=round(number/sum(number)*100,1)) %>%
-  arrange(desc(percentage)) %>%
+  #arrange(desc(percentage)) %>%
   mutate(combined = paste0(number," (",percentage,"%)")) %>%
   select(-number,-percentage) %>%
   mutate(repeatability.interpretation.2 = fct_recode(repeatability.interpretation.2, "e) Others (see Table S3)" = "other")) %>%
@@ -179,7 +179,7 @@ tableS8 <- data.red %>%
   group_by(repeatability.comparison.2) %>%
   summarise(number=n()) %>% 
   mutate(percentage=round(number/sum(number)*100,1)) %>%
-  arrange(desc(percentage)) %>%
+  #arrange(desc(percentage)) %>%
   mutate(combined = paste0(number," (",percentage,"%)")) %>%
   select(-number,-percentage) %>%
   gt() %>%
@@ -215,7 +215,7 @@ table(data.red$personality.data)
 
 
 ################################################################################
-# comments
+# comments: decided not to provide it to preserve anonymity
 ################################################################################
 
 # only from self-reported researchers in animal personality
@@ -233,18 +233,18 @@ table(data.red$personality.data)
 # 
 # gtsave(tableS9,filename="tableS9.png", path="./tables/")
 
-# for all self-reported researchers
-data.red <- read.csv("data/survey/understanding_personality_survey_results_reformatted.csv",header=T,sep=",")
-
-table(data.red$comments)
-
-tableS9 <- data.red[!(is.na(data.red$comments)),"comments"] %>%
-  as.data.frame() %>%
-  gt() %>%
-  cols_label(.=md("**Comments from participants**")) %>%
-  cols_align(align = "left") %>%
-  tab_options(table.width=950)
-
-tableS9
-
-gtsave(tableS9,filename="tableS9.png", path="./tables/")
+# # for all self-reported researchers
+# data.red <- read.csv("data/survey/understanding_personality_survey_results_reformatted.csv",header=T,sep=",")
+# 
+# table(data.red$comments)
+# 
+# tableS9 <- data.red[!(is.na(data.red$comments)),"comments"] %>%
+#   as.data.frame() %>%
+#   gt() %>%
+#   cols_label(.=md("**Comments from participants**")) %>%
+#   cols_align(align = "left") %>%
+#   tab_options(table.width=950)
+# 
+# tableS9
+# 
+# gtsave(tableS9,filename="tableS9.png", path="./tables/")
