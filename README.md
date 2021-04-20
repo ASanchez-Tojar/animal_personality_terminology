@@ -20,8 +20,8 @@ All R code is available in the main folder and scripts are numbered in order of 
 
 [`data`](https://github.com/ASanchez-Tojar/animal_personality_terminology/tree/main/data): contains three sub-folders, one for each of the main data components of our study: 
 * [Personality concept](https://github.com/ASanchez-Tojar/animal_personality_terminology/tree/main/data/personality_concept): this sub-folder contains information about the  animal personality definitions extracted from 26 highly cited articles in the field. 
-* [Survey](https://github.com/ASanchez-Tojar/animal_personality_terminology/tree/main/data/survey): this sub-folder contains the data from the self-report questionnaire, and also data to recreate figure 1 (affiliation map). 
-* [Ten journals](https://github.com/ASanchez-Tojar/animal_personality_terminology/tree/main/data/ten_journals): this sub-folder contains the data extracted as part of the literature review, which is shown per observer and also, and more importantly, the combined dataset covering all studies reviewed, including among-observer conflict resolution.
+* [Survey](https://github.com/ASanchez-Tojar/animal_personality_terminology/tree/main/data/survey): this sub-folder contains the data from the self-report questionnaire, and also data to recreate figure 1 (affiliation map). In all, 440 participants took part in our self-report questionnaire.
+* [Ten journals](https://github.com/ASanchez-Tojar/animal_personality_terminology/tree/main/data/ten_journals): this sub-folder contains the data extracted as part of the literature review, which is shown per observer and also, and more importantly, the combined dataset covering all studies reviewed, including among-observer conflict resolution. In all, 88 articles published in 9 journals provided enough data for our review.
 
 [`figures`](https://github.com/ASanchez-Tojar/animal_personality_terminology/tree/main/figures): contains all figures (main and supplementary ones) created for this study, all of which were created using the R package [`ggplot2` v.3.3.3](https://cran.r-project.org/web/packages/ggplot2/index.html).
 
