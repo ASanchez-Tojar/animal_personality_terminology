@@ -283,7 +283,7 @@ repeatability.3 <- repeatability.3 %>%
 library(ggpubr)
 
 # exporting figure 1
-tiff("figures/Figure1.tiff",
+tiff("figures/Figure2.tiff",
      height=18, width=50,
      units='cm', compression="lzw", res=600)
 
