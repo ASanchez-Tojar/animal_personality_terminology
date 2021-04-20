@@ -286,7 +286,7 @@ table2 <- data.red %>%
   group_by(personality.interpretation.2) %>%
   summarise(number=n()) %>% 
   mutate(percentage=round(number/sum(number)*100,1)) %>%
-  arrange(desc(percentage)) %>%
+  #arrange(desc(percentage)) %>%
   mutate(combined = paste0(number," (",percentage,"%)")) %>%
   select(-number,-percentage) %>%
   mutate(personality.interpretation.2 = fct_recode(personality.interpretation.2, "e) Others (see Table S2)" = "other")) %>%
@@ -350,7 +350,7 @@ table3 <- data.red %>%
   group_by(repeatability.interpretation.2) %>%
   summarise(number=n()) %>% 
   mutate(percentage=round(number/sum(number)*100,1)) %>%
-  arrange(desc(percentage)) %>%
+  #arrange(desc(percentage)) %>%
   mutate(combined = paste0(number," (",percentage,"%)")) %>%
   select(-number,-percentage) %>%
   mutate(repeatability.interpretation.2 = fct_recode(repeatability.interpretation.2, "e) Others (see Table S3)" = "other")) %>%
@@ -411,7 +411,7 @@ table4 <- data.red %>%
   group_by(repeatability.comparison.2) %>%
   summarise(number=n()) %>% 
   mutate(percentage=round(number/sum(number)*100,1)) %>%
-  arrange(desc(percentage)) %>%
+  #arrange(desc(percentage)) %>%
   mutate(combined = paste0(number," (",percentage,"%)")) %>%
   select(-number,-percentage) %>%
   gt() %>%
