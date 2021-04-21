@@ -36,3 +36,5 @@ All R code is available in the main folder and scripts are numbered in order of 
 ### Notes:
 
 See details of the licence of this repository in [LICENSE.txt] (tba)
+
+If you have troubbles importing some of the datasets, particularly if you are using Windows, it might be because the path names are longer than allowed by Windows. If that is the case, try and copy the entire folder (i.e. animal_personality_terminology) to your Desktop and running the code from there. We did not think of this character limit when trying to name files as self-explanatory as possible. Sincere apologies for these.
