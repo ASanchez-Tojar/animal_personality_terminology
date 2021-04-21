@@ -116,11 +116,11 @@ table(final.database$repeatability_consist_predict)
 # repeatability of two or more groups compared
 table(final.database$repetability_comparison) 
 
-# when repeatability of two o rmore groups compared, what is the interpretation?
+# when repeatability of two or more groups compared, what is the interpretation?
 table(final.database$repetability_comparison_interpretation)
 
-# do the authors report unstandardize variance components in addition to the repeatability values?
+# do the authors report unstandardized variance components in addition to the repeatability values?
 table(final.database$unstandardize_variance.2)
 
-# how many of those comparing repeatability values provide unstandardize variance components?
+# how many of those comparing repeatability values provide unstandardized variance components?
 table(final.database[final.database$repetability_comparison_interpretation %in% c("among","both","within"),"unstandardize_variance.2"])
