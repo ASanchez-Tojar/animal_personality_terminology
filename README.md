@@ -14,7 +14,7 @@ For any further information, please contact: [Alfredo Sánchez-Tójar](https://s
 
 ## Code:
 
-All R code is available in the main folder and scripts are numbered in order of use from 001 to 009. Scripts titles should be self-explanatory, but each script contains a "Description of script and Instructions" section with further information. The paths provided to import datasets into R assume your location is where the code is, i.e. the general folder `animal_personality_terminology`, make sure to setwd(), if necessary. The R version used throughout was 4.0.4, except for scripts 001-003, for which we provide a copy of the sessionInfo() in `literature_search/30_most_cited/screening_process_Rpackages_session.txt`, `literature_search/ten_journals/screening_process_Rpackages_session.txt` and `screening/ten_journals/screening_process_Rpackages_session.txt`, respectively. 
+All R code is available in the main folder and scripts are numbered in order of use from 001 to 009. Scripts titles should be self-explanatory, but each script contains a "Description of script and Instructions" section with further information. The paths provided to import datasets into R assume your location is where the code is, i.e. the general folder `animal_personality_terminology`, make sure to setwd(), if necessary. The R version used throughout was 4.0.4, except for scripts 001-003, for which we provide a copy of the sessionInfo() in [001](https://github.com/ASanchez-Tojar/animal_personality_terminology/blob/main/literature_search/30_most_cited/screening_process_Rpackages_session.txt), and [002-003](https://github.com/ASanchez-Tojar/animal_personality_terminology/blob/main/literature_search/ten_journals/screening_process_Rpackages_session.txt).
 
 ## Folders:
 
