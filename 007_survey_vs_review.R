@@ -97,12 +97,15 @@ summary(repeatability.1)
 repeatability.1 <- repeatability.1 %>%
   group_by(source,repeatability_interpretation) %>% 
   summarise(n = n()) %>% 
-  mutate(percentage = round((n/sum(n))*100,1)) %>% 
-  ggplot() + 
-  geom_bar(aes(y = percentage, x = repeatability_interpretation, fill = source), 
-           stat="identity", position="dodge", colour = "white") +
+  mutate(total.n = sum(n)) %>%
+  mutate(percentage = round(binom.confint(n, total.n, method=c("agresti-coull"),type="central")$mean*100,1)) %>% #going for agresti-coull method, see https://casual-inference.com/post/binom-confint/
+  mutate(lower = round(binom.confint(n, total.n, method=c("agresti-coull"),type="central")$lower*100,1)) %>%
+  mutate(upper = round(binom.confint(n, total.n, method=c("agresti-coull"),type="central")$upper*100,1)) %>%
+  ggplot(aes(y=percentage, x=repeatability_interpretation,ymin=lower, ymax=upper,fill = source)) + 
+  geom_bar(position = position_dodge(), stat="identity") +
+  geom_errorbar(position=position_dodge(.9), width = .2) +
   geom_text(aes(y = percentage, x = repeatability_interpretation, 
-                group = source,label=paste0("n=",n)), position=position_dodge(width=0.9), vjust=-0.25, size=6, color="grey35") + 
+                group = source,label=paste0("n=",n)), position=position_dodge(width=0.9), vjust=-3.5, size=6, color="grey35") + 
   labs(y="% participants/articles") +
   #ggtitle("Repeatability interpretation") +
   scale_y_continuous(limits = c(0,100), breaks = seq(0,100,20),
@@ -169,12 +172,15 @@ summary(repeatability.2)
 repeatability.2 <- repeatability.2 %>%
   group_by(source,repeatability.consistency) %>% 
   summarise(n = n()) %>% 
-  mutate(percentage = round((n/sum(n))*100,1)) %>% 
-  ggplot() + 
-  geom_bar(aes(y = percentage, x = repeatability.consistency, fill = source), 
-           stat="identity", position="dodge", colour = "white", width=c(rep(0.65,4))) +
+  mutate(total.n = sum(n)) %>%
+  mutate(percentage = round(binom.confint(n, total.n, method=c("agresti-coull"),type="central")$mean*100,1)) %>%
+  mutate(lower = round(binom.confint(n, total.n, method=c("agresti-coull"),type="central")$lower*100,1)) %>%
+  mutate(upper = round(binom.confint(n, total.n, method=c("agresti-coull"),type="central")$upper*100,1)) %>%
+  ggplot(aes(y=percentage, x=repeatability.consistency,ymin=lower, ymax=upper,fill = source)) + 
+  geom_bar(position = position_dodge(), stat="identity") +
+  geom_errorbar(position=position_dodge(.9), width = .2) +
   geom_text(aes(y = percentage, x = repeatability.consistency, 
-                group = source,label=paste0("n=",n)), position=position_dodge(width=0.7), vjust=-0.1, size=6, color="grey35") + 
+                group = source,label=paste0("n=",n)), position=position_dodge(width=0.9), vjust=-4, size=6, color="grey35") + 
   labs(y="") +
   #ggtitle("Repeatability as individual consistency/predictability?") +
   scale_y_continuous(limits = c(0,100), breaks = seq(0,100,20),
@@ -243,12 +249,19 @@ summary(repeatability.3)
 repeatability.3 <- repeatability.3 %>%
   group_by(source,repetability_comparison_interpretation) %>% 
   summarise(n = n()) %>% 
-  mutate(percentage = round((n/sum(n))*100,1)) %>% 
-  ggplot() + 
-  geom_bar(aes(y = percentage, x = repetability_comparison_interpretation, fill = source), 
-           stat="identity", position="dodge", colour = "white") +
+  mutate(total.n = sum(n)) %>%
+  mutate(percentage = round(binom.confint(n, total.n, method=c("agresti-coull"),type="central")$mean*100,1)) %>%
+  mutate(lower = round(binom.confint(n, total.n, method=c("agresti-coull"),type="central")$lower*100,1)) %>%
+  mutate(upper = round(binom.confint(n, total.n, method=c("agresti-coull"),type="central")$upper*100,1)) %>%
+  ggplot(aes(y=percentage, x=repetability_comparison_interpretation,ymin=lower, ymax=upper,fill = source)) + 
+  geom_bar(position = position_dodge(), stat="identity") +
+  geom_errorbar(position=position_dodge(.9), width = .2) +
+  # mutate(percentage = round((n/sum(n))*100,1)) %>% 
+  # ggplot() + 
+  # geom_bar(aes(y = percentage, x = repetability_comparison_interpretation, fill = source), 
+  #          stat="identity", position="dodge", colour = "white") +
   geom_text(aes(y = percentage, x = repetability_comparison_interpretation, 
-                group = source,label=paste0("n=",n)), position=position_dodge(width=0.9), vjust=-0.25, size=6, color="grey35") + 
+                group = source,label=paste0("n=",n)), position=position_dodge(width=0.9), vjust=-8, size=6, color="grey35") + 
   labs(y="") +
   #ggtitle("Interpreting repeatability between groups") +
   scale_y_continuous(limits = c(0,100), breaks = seq(0,100,20),
@@ -267,10 +280,10 @@ repeatability.3 <- repeatability.3 %>%
         axis.text.x = element_text(size = 18, color="black"),
         axis.text.y = element_text(size = 15),
         plot.margin = unit(c(0.7,0.25,0.25,0.25), "cm"),
-        legend.position = c(0.78, 0.88),
-        legend.title = element_text(size = 22),
-        legend.text = element_text(size = 18),
-        legend.key.size = unit(1.1, "cm"),
+        legend.position = c(0.78, 0.90),
+        legend.title = element_text(size = 21),
+        legend.text = element_text(size = 17),
+        legend.key.size = unit(1, "cm"),
         legend.background = element_rect(fill = "grey95"),
         legend.key = element_rect(fill = "grey95", color = NA),
         plot.title = element_text(hjust = 0.5))
@@ -283,7 +296,7 @@ repeatability.3 <- repeatability.3 %>%
 library(ggpubr)
 
 # exporting figure 1
-tiff("figures/Figure2.tiff",
+tiff("figures/Figure2_v2.tiff",
      height=18, width=50,
      units='cm', compression="lzw", res=600)
 
