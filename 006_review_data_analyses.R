@@ -20,7 +20,7 @@
 # Packages needed
 ################################################################################
 
-pacman::p_load(openxlsx,stringr,dplyr,tidyverse)
+pacman::p_load(openxlsx,stringr,dplyr,tidyverse,binom)
 
 # Clear memory
 rm(list=ls())
@@ -104,14 +104,44 @@ write.csv(final.database,
 # year distribution
 table(final.database$year)
 
+
 # journal distribution
 table(final.database$journal)
+
 
 # repeatability interpretation
 table(final.database$repeatability_interpretation)
 
+# both percentage manually plus 95%CI
+binom.confint(table(final.database$repeatability_interpretation)[2], 
+              sum(table(final.database$repeatability_interpretation)[1],
+                  table(final.database$repeatability_interpretation)[2],
+                  table(final.database$repeatability_interpretation)[5]), 
+              method=c("agresti-coull"),type="central")
+
+# within percentage manually plus 95%CI
+binom.confint(table(final.database$repeatability_interpretation)[5], 
+              sum(table(final.database$repeatability_interpretation)[1],
+                  table(final.database$repeatability_interpretation)[2],
+                  table(final.database$repeatability_interpretation)[5]), 
+              method=c("agresti-coull"),type="central")
+
+# among percentage manually plus 95%CI
+binom.confint(table(final.database$repeatability_interpretation)[1], 
+              sum(table(final.database$repeatability_interpretation)[1],
+                  table(final.database$repeatability_interpretation)[2],
+                  table(final.database$repeatability_interpretation)[5]), 
+              method=c("agresti-coull"),type="central")
+
+
 # is repeatability interpreted as individual predictability and/or consistency?
 table(final.database$repeatability_consist_predict) 
+
+# individual predictability and/or consistency percentage manually plus 95%CI
+binom.confint(table(final.database$repeatability_consist_predict)[3], 
+              sum(table(final.database$repeatability_consist_predict)[1],
+                  table(final.database$repeatability_consist_predict)[3]), 
+              method=c("agresti-coull"),type="central")
 
 # repeatability of two or more groups compared
 table(final.database$repetability_comparison) 
