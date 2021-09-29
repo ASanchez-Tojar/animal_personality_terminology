@@ -143,14 +143,50 @@ binom.confint(table(final.database$repeatability_consist_predict)[3],
                   table(final.database$repeatability_consist_predict)[3]), 
               method=c("agresti-coull"),type="central")
 
+
 # repeatability of two or more groups compared
 table(final.database$repetability_comparison) 
+
 
 # when repeatability of two or more groups compared, what is the interpretation?
 table(final.database$repetability_comparison_interpretation)
 
+# group comparison both percentage manually plus 95%CI
+binom.confint(table(final.database$repetability_comparison_interpretation)[2], 
+              sum(table(final.database$repetability_comparison_interpretation)[1],
+                  table(final.database$repetability_comparison_interpretation)[2],
+                  table(final.database$repetability_comparison_interpretation)[5]), 
+              method=c("agresti-coull"),type="central")
+
+# group comparison within percentage manually plus 95%CI
+binom.confint(table(final.database$repetability_comparison_interpretation)[5], 
+              sum(table(final.database$repetability_comparison_interpretation)[1],
+                  table(final.database$repetability_comparison_interpretation)[2],
+                  table(final.database$repetability_comparison_interpretation)[5]), 
+              method=c("agresti-coull"),type="central")
+
+# group comparison among percentage manually plus 95%CI
+binom.confint(table(final.database$repetability_comparison_interpretation)[1], 
+              sum(table(final.database$repetability_comparison_interpretation)[1],
+                  table(final.database$repetability_comparison_interpretation)[2],
+                  table(final.database$repetability_comparison_interpretation)[5]), 
+              method=c("agresti-coull"),type="central")
+
 # do the authors report unstandardized variance components in addition to the repeatability values?
 table(final.database$unstandardize_variance.2)
 
+# unstandardized 1 percentage manually plus 95%CI
+binom.confint(table(final.database$unstandardize_variance.2)[2], 
+              sum(table(final.database$unstandardize_variance.2)[1],
+                  table(final.database$unstandardize_variance.2)[2]), 
+              method=c("agresti-coull"),type="central")
+
+
 # how many of those comparing repeatability values provide unstandardized variance components?
 table(final.database[final.database$repetability_comparison_interpretation %in% c("among","both","within"),"unstandardize_variance.2"])
+
+# unstandardized 1 percentage manually plus 95%CI
+binom.confint(table(final.database[final.database$repetability_comparison_interpretation %in% c("among","both","within"),"unstandardize_variance.2"])[2], 
+              sum(table(final.database[final.database$repetability_comparison_interpretation %in% c("among","both","within"),"unstandardize_variance.2"])[1],
+                  table(final.database[final.database$repetability_comparison_interpretation %in% c("among","both","within"),"unstandardize_variance.2"])[2]), 
+              method=c("agresti-coull"),type="central")
