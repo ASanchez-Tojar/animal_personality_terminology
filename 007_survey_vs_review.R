@@ -119,7 +119,7 @@ repeatability.1 <- repeatability.1 %>%
         panel.background = element_blank(),
         axis.line = element_line(colour = "black"),
         axis.title.x=element_blank(),
-        axis.title.y = element_text(size = 25,vjust = 9),
+        axis.title.y = element_text(size = 25,vjust = 4),
         axis.text.x = element_text(size = 18, color="black"),
         axis.text.y = element_text(size = 15),
         plot.margin = unit(c(0.7,0.25,0.25,2), "cm"),
