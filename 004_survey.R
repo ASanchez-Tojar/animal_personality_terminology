@@ -240,12 +240,13 @@ table1
 gtsave(table1,filename="table1.png", path="./tables/")
 
 
-
 # creating table S1 containing all definitions contained in the others category
-tableS1 <- data.red[!(data.red$personality.definition %in% personality.definition.replies),"personality.definition"] %>% 
+tableS1 <- data.red %>%
+  filter(!(personality.definition %in% personality.definition.replies)) %>%
+  select(personality.definition) %>%
   as.data.frame() %>%
   gt() %>%
-  cols_label(.=md("**Additional animal personality definitions provided by the participants**")) %>%
+  cols_label("personality.definition"=md("**Additional animal personality definitions provided by the participants**")) %>%
   cols_align(align = "left") %>%
   tab_options(table.width=775)
 
@@ -304,10 +305,12 @@ gtsave(table2,filename="table2.png", path="./tables/")
 #table(data.red[!(data.red$personality.interpretation %in% personality.interpretation.replies),"personality.interpretation"])
 
 # creating table S2 containing all interpretations contained in the others category
-tableS2 <- data.red[!(data.red$personality.interpretation %in% personality.interpretation.replies),"personality.interpretation"] %>% 
+tableS2 <- data.red %>%
+  filter(!(personality.interpretation %in% personality.interpretation.replies)) %>%
+  select(personality.interpretation) %>%
   as.data.frame() %>%
   gt() %>%
-  cols_label(.=md("**Additional biological interpretations of animal personality provided by the participants**")) %>%
+  cols_label("personality.interpretation"=md("**Additional biological interpretations of animal personality provided by the participants**")) %>%
   cols_align(align = "left") %>%
   tab_options(table.width=775)
 
@@ -366,10 +369,12 @@ table3
 gtsave(table3,filename="table3.png", path="./tables/")
 
 # creating table S3 containing all interpretations contained in the others category
-tableS3 <- data.red[!(data.red$repeatability.interpretation %in% repeatability.interpretation.replies),"repeatability.interpretation"] %>% 
+tableS3 <- data.red %>%
+  filter(!(repeatability.interpretation %in% repeatability.interpretation.replies)) %>%
+  select(repeatability.interpretation) %>%
   as.data.frame() %>%
   gt() %>%
-  cols_label(.=md("**Additional interpretations of repeatability provided by the participants**")) %>%
+  cols_label("repeatability.interpretation"=md("**Additional interpretations of repeatability provided by the participants**")) %>%
   cols_align(align = "left") %>%
   tab_options(table.width=950)
 
