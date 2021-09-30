@@ -216,6 +216,21 @@ data.red$personality.definition.2 <- ifelse(data.red$personality.definition %in%
 
 table(data.red$personality.definition.2)
 
+# Consistent between-individual differences in behaviour across time and/or contexts percentage manually plus 95%CI
+binom.confint(table(data.red$personality.definition.2)[2], 
+              sum(table(data.red$personality.definition.2)), 
+              method=c("agresti-coull"),type="central")
+
+# Variation among individuals in the intercept of their behavioural reaction norm percentage manually plus 95%CI
+binom.confint(table(data.red$personality.definition.2)[5], 
+              sum(table(data.red$personality.definition.2)), 
+              method=c("agresti-coull"),type="central")
+
+# Within-individual and between-individual consistency in behaviours across time and/or ecological contexts percentage manually plus 95%CI
+binom.confint(table(data.red$personality.definition.2)[6], 
+              sum(table(data.red$personality.definition.2)), 
+              method=c("agresti-coull"),type="central")
+
 
 #table(data.red[!(data.red$personality.definition %in% personality.definition.replies),"personality.definition"])
 
@@ -280,6 +295,31 @@ data.red$personality.interpretation.2 <- ifelse(data.red$personality.interpretat
                                                 "other")
 
 table(data.red$personality.interpretation.2)
+
+# Individual differences in average behavioural expression in a sample of individuals percentage manually plus 95%CI
+binom.confint(table(data.red$personality.interpretation.2)[2], 
+              sum(table(data.red$personality.interpretation.2)), 
+              method=c("agresti-coull"),type="central")
+
+# c) Both a) and b) are correct percentage manually plus 95%CI
+binom.confint(table(data.red$personality.interpretation.2)[3], 
+              sum(table(data.red$personality.interpretation.2)), 
+              method=c("agresti-coull"),type="central")
+
+# among combined percentage manually plus 95%CI
+binom.confint(sum(table(data.red$personality.interpretation.2)[2],table(data.red$personality.interpretation.2)[3]), 
+              sum(table(data.red$personality.interpretation.2)), 
+              method=c("agresti-coull"),type="central")
+
+# within combined percentage manually plus 95%CI
+binom.confint(sum(table(data.red$personality.interpretation.2)[1],table(data.red$personality.interpretation.2)[3]), 
+              sum(table(data.red$personality.interpretation.2)), 
+              method=c("agresti-coull"),type="central")
+
+# Limited phenotypic plasticity in behavioural expression in a sample of individuals percentage manually plus 95%CI
+binom.confint(table(data.red$personality.interpretation.2)[1], 
+              sum(table(data.red$personality.interpretation.2)), 
+              method=c("agresti-coull"),type="central")
 
 
 # creating table 2 summarizing the interpreations from the questionnaire
@@ -348,6 +388,28 @@ data.red$repeatability.interpretation.2 <- ifelse(data.red$repeatability.interpr
 
 table(data.red$repeatability.interpretation.2)
 
+# (Relative) amount of individual differences in average trait expression in a sample of individuals percentage manually plus 95%CI
+binom.confint(table(data.red$repeatability.interpretation.2)[2], 
+              sum(table(data.red$personality.interpretation.2)), 
+              method=c("agresti-coull"),type="central")
+
+# (Relative) amount of phenotypic plasticity in trait expression in a sample of individuals percentage manually plus 95%CI
+binom.confint(table(data.red$repeatability.interpretation.2)[1], 
+              sum(table(data.red$personality.interpretation.2)), 
+              method=c("agresti-coull"),type="central")
+
+# Both a) and b) are correct percentage manually plus 95%CI
+binom.confint(table(data.red$repeatability.interpretation.2)[3], 
+              sum(table(data.red$personality.interpretation.2)), 
+              method=c("agresti-coull"),type="central")
+
+# (Relative) amount of phenotypic plasticity in trait expression in a sample of individuals and Both a) and b) are correct percentage manually plus 95%CI
+binom.confint(sum(table(data.red$repeatability.interpretation.2)[3],table(data.red$repeatability.interpretation.2)[1]), 
+              sum(table(data.red$personality.interpretation.2)), 
+              method=c("agresti-coull"),type="central")
+
+
+
 # creating table 3 summarizing the interpreations from the questionnaire
 table3 <- data.red %>%
   group_by(repeatability.interpretation.2) %>%
@@ -388,6 +450,20 @@ gtsave(tableS3,filename="tableS3.png", path="./tables/")
 ################################################################################
 table(data.red$repeatability.consistency)
 
+# repeatability.consistency yes percentage manually plus 95%CI
+binom.confint(table(data.red$repeatability.consistency)[3], 
+              sum(table(data.red$repeatability.consistency)), 
+              method=c("agresti-coull"),type="central")
+
+# repeatability.consistency no percentage manually plus 95%CI
+binom.confint(table(data.red$repeatability.consistency)[2], 
+              sum(table(data.red$repeatability.consistency)), 
+              method=c("agresti-coull"),type="central")
+
+# repeatability.consistency I dunno percentage manually plus 95%CI
+binom.confint(table(data.red$repeatability.consistency)[1], 
+              sum(table(data.red$repeatability.consistency)), 
+              method=c("agresti-coull"),type="central")
 
 ################################################################################
 # repeatability comparison
@@ -410,6 +486,27 @@ table(data.red$repeatability.comparison)
 data.red$repeatability.comparison.2 <- data.red$repeatability.comparison
 
 table(data.red$repeatability.comparison.2)
+
+# c) Both interpretations a) and b) can be made percentage manually plus 95%CI
+binom.confint(table(data.red$repeatability.comparison.2)[3], 
+              sum(table(data.red$repeatability.comparison.2)), 
+              method=c("agresti-coull"),type="central")
+
+# d) Neither interpretations a) nor b) can be made percentage manually plus 95%CI
+binom.confint(table(data.red$repeatability.comparison.2)[4], 
+              sum(table(data.red$repeatability.comparison.2)), 
+              method=c("agresti-coull"),type="central")
+
+# repeatability.consistency I dunno percentage manually plus 95%CI
+binom.confint(table(data.red$repeatability.comparison.2)[5], 
+              sum(table(data.red$repeatability.comparison.2)), 
+              method=c("agresti-coull"),type="central")
+
+# a) Group “A” expresses less plasticity in their trait expression than group “B” percentage manually plus 95%CI
+binom.confint(table(data.red$repeatability.comparison.2)[1], 
+              sum(table(data.red$repeatability.comparison.2)), 
+              method=c("agresti-coull"),type="central")
+
 
 # creating table 4 summarizing the interpreations from the questionnaire
 table4 <- data.red %>%
@@ -438,6 +535,15 @@ table(data.red$single.measurements)
 
 table(data.red[data.red$personality.experience %in% c("Yes, as a co-author","Yes, as a lead, corresponding or senior author"),
                "single.measurements"])
+
+# used single measurements percentage manually plus 95%CI
+binom.confint(table(data.red[data.red$personality.experience %in% c("Yes, as a co-author","Yes, as a lead, corresponding or senior author"),
+                             "single.measurements"])[3], 
+              sum(table(data.red[data.red$personality.experience %in% c("Yes, as a co-author","Yes, as a lead, corresponding or senior author"),
+                                 "single.measurements"])[2],
+                  table(data.red[data.red$personality.experience %in% c("Yes, as a co-author","Yes, as a lead, corresponding or senior author"),
+                                 "single.measurements"])[3]), 
+              method=c("agresti-coull"),type="central")
 
 
 ################################################################################
@@ -479,6 +585,15 @@ data.red <- mutate(data.red, personality.data = fct_recode(personality.data,
 # table(data.red$personality.data.2)
 
 table(data.red$personality.data)
+
+# repeatability.consistency no percentage manually plus 95%CI
+binom.confint(sum(table(data.red$personality.data)[2],table(data.red$personality.data)[4],table(data.red$personality.data)[5]), 
+              sum(table(data.red$personality.data)), 
+              method=c("agresti-coull"),type="central")
+
+# repeatability.consistency yes discussion percentage manually plus 95%CI
+binom.confint(297,381, 
+              method=c("agresti-coull"),type="central")
 
 ################################################################################
 # personality data
