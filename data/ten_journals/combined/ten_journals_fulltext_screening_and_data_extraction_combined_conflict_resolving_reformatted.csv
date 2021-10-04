@@ -1,89 +1,89 @@
-"studyID","year","journal","url","t.and.a_decision","fulltext_decision","fulltext_exclusion_reason","repeatability","repeatability_interpretation","repeatability_consist_predict","repetability_comparison","repetability_comparison_interpretation","unstandardize_variance.2"
-"APR006",2019,"BEHAVIORAL ECOLOGY","10.1093/beheco/ary178","yes","yes",NA,"yes","unclear","unclear","unclear",NA,"yes"
-"APR039",2018,"ETHOLOGY","10.1111/eth.12770","yes","yes",NA,"yes","within","yes","yes","within","yes"
-"APR055",2018,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2018.04.023","yes","yes",NA,"yes","both","yes","no",NA,"yes"
-"APR064",2018,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2018.02.013","yes","yes",NA,"yes","both","yes","yes","both","yes"
-"APR079",2018,"CURRENT ZOOLOGY","10.1093/cz/zox008","yes","yes",NA,"yes","both","yes","no",NA,"no"
-"APR086",2018,"BEHAVIOUR","10.1163/1568539X-00003500","yes","yes",NA,"yes","both","no","no",NA,"no"
-"APR089",2018,"BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY","10.1007/s00265-017-2428-8","yes","yes",NA,"yes","within","yes","no",NA,"no"
-"APR097",2017,"PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES","10.1098/rspb.2017.1893","yes","yes",NA,"yes","both","yes","no",NA,"yes"
-"APR103",2017,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2017.08.027","yes","yes",NA,"yes","within","no","no",NA,"yes"
-"APR106",2017,"PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES","10.1098/rspb.2017.0943","yes","yes",NA,"yes","both","yes","yes","both","yes"
-"APR108",2017,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2017.08.010","yes","yes",NA,"yes","within","yes","no",NA,"no"
-"APR133",2017,"BEHAVIORAL ECOLOGY","10.1093/beheco/arx070","yes","yes",NA,"yes","among","no","no",NA,"no"
-"APR155",2017,"PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES","10.1098/rspb.2016.2872","yes","yes",NA,"yes","within","yes","no",NA,"no"
-"APR163",2017,"BEHAVIORAL ECOLOGY","10.1093/beheco/arw174","yes","yes",NA,"yes","both","yes","no",NA,"no"
-"APR186",2017,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2016.10.006","yes","yes",NA,"yes","both","no","no",NA,"no"
-"APR195",2016,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2016.10.001","yes","yes",NA,"yes","none",NA,"no",NA,"no"
-"APR203",2016,"BEHAVIORAL ECOLOGY","10.1093/beheco/arw094","yes","yes",NA,"yes","both","no","no",NA,"yes"
-"APR223",2016,"BEHAVIORAL ECOLOGY","10.1093/beheco/arw037","yes","yes",NA,"yes","both","no","no",NA,"yes"
-"APR270",2016,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2015.10.032","yes","yes",NA,"yes","both","yes","yes","within","no"
-"APR279",2015,"BEHAVIORAL ECOLOGY","10.1093/beheco/arv101","yes","yes",NA,"yes","among","no","no",NA,"no"
-"APR315",2015,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2015.02.007","yes","yes",NA,"yes","both","yes","no",NA,"no"
-"APR004",2019,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2019.02.009","yes","yes",NA,"yes","both","yes","no",NA,"no"
-"APR005",2019,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2019.02.016","yes","yes",NA,"yes","both","no","yes","among","no"
-"APR012",2019,"CURRENT ZOOLOGY","10.1093/cz/zoy021","yes","yes",NA,"yes","both","no","no",NA,"no"
-"APR015",2019,"BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY","10.1007/s00265-019-2637-4","yes","yes",NA,"yes","both","yes","no",NA,"no"
-"APR019",2019,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2018.11.007","yes","yes",NA,"yes","both","no","no",NA,"no"
-"APR020",2018,"BEHAVIOURAL PROCESSES","10.1016/j.beproc.2018.08.009","yes","yes",NA,"yes","both","yes","no",NA,"no"
-"APR031",2018,"CURRENT ZOOLOGY","10.1093/cz/zox053","yes","yes",NA,"yes","both","no","no",NA,"no"
-"APR041",2018,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2018.06.009","yes","yes",NA,"yes","within","yes","no",NA,"no"
-"APR046",2018,"ETHOLOGY","10.1111/eth.12766","yes","yes",NA,"yes","both","yes","yes","within","yes"
-"APR052",2018,"BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY","10.1007/s00265-018-2520-8","yes","yes",NA,"yes","both","no","no",NA,"no"
-"APR061",2018,"ETHOLOGY","10.1111/eth.12735","yes","yes",NA,"yes","both","no","no",NA,"no"
-"APR062",2018,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2018.01.022","yes","yes",NA,"yes","among","no","no",NA,"yes"
-"APR067",2018,"BEHAVIOURAL PROCESSES","10.1016/j.beproc.2018.02.003","yes","yes",NA,"yes","both","no","no",NA,"yes"
-"APR073",2018,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2018.01.011","yes","yes",NA,"yes","among","no","no",NA,"no"
-"APR074",2018,"PLOS ONE","10.1371/journal.pone.0193425","yes","yes",NA,"yes","both","yes","yes","none","no"
-"APR083",2018,"BEHAVIOUR","10.1163/1568539X-00003522","yes","yes",NA,"yes","both","yes","no",NA,"yes"
-"APR084",2018,"BEHAVIOUR","10.1163/1568539X-00003509","yes","yes",NA,"yes","both","yes","no",NA,"no"
-"APR085",2018,"BEHAVIOUR","10.1163/1568539X-00003483","yes","yes",NA,"yes","both","no","no",NA,"no"
-"APR096",2018,"ETHOLOGY","10.1111/eth.12704","yes","yes",NA,"yes","within","no","no",NA,"no"
-"APR117",2017,"BEHAVIOURAL PROCESSES","10.10164/j.beproc.2007.06.006","yes","yes",NA,"yes","both","yes","no",NA,"no"
-"APR118",2017,"BEHAVIOURAL PROCESSES","10.1016/j.beproc.2017.06.002","yes","yes",NA,"yes","within","yes","yes","within","no"
-"APR119",2017,"ETHOLOGY","10.1111/eth.12639","yes","yes",NA,"yes","both","yes","no",NA,"no"
-"APR122",2017,"PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES","10.1098/rspb.2017.0893","yes","yes",NA,"yes","both","yes","no",NA,"yes"
-"APR130",2017,"BEHAVIOURAL PROCESSES","10.1016/j.beproc.2017.02.017","yes","yes",NA,"yes","both","yes","no",NA,"no"
-"APR135",2017,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2017.05.013","yes","yes",NA,"yes","both","no","yes","none","no"
-"APR152",2017,"BEHAVIORAL ECOLOGY","10.1093/beheco/arx013","yes","yes",NA,"yes","both","no","no",NA,"yes"
-"APR158",2017,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2017.02.004","yes","yes",NA,"yes","within","yes","no",NA,"no"
-"APR166",2017,"BEHAVIOURAL PROCESSES","10.1016/j.beproc.2016.12.011","yes","yes",NA,"yes","both","no","no",NA,"no"
-"APR173",2017,"BEHAVIOUR","10.1163/1568539X-00003433","yes","yes",NA,"yes","within","yes","yes","unclear","no"
-"APR177",2017,"BEHAVIORAL ECOLOGY","10.1093/beheco/arw164","yes","yes",NA,"yes","both","yes","yes","both","yes"
-"APR180",2017,"BEHAVIOURAL PROCESSES","10.1016/j.beproc.2016.07.001","yes","yes",NA,"yes","within","yes","no",NA,"yes"
-"APR182",2017,"BEHAVIOURAL PROCESSES","10.1016/j.beproc.2016.07.006","yes","yes",NA,"yes","within","no","no",NA,"no"
-"APR185",2017,"BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY","10.1007/s00265-016-2257-1","yes","yes",NA,"yes","both","no","yes","among","no"
-"APR187",2017,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2016.10.017","yes","yes",NA,"yes","within","yes","yes","within","no"
-"APR188",2017,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2016.09.005","yes","yes",NA,"yes","both","no","yes","within","no"
-"APR190",2017,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2016.11.014","yes","yes",NA,"yes","both","yes","yes","none","yes"
-"APR193",2016,"PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES","10.1098/rspb.2016.1409","yes","yes",NA,"yes","unclear","unclear","no",NA,"no"
-"APR196",2016,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2016.09.024","yes","yes",NA,"yes","both","no","no",NA,"no"
-"APR197",2016,"BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY","10.1007/s00265-016-2206-z","yes","yes",NA,"yes","both","no","no",NA,"yes"
-"APR200",2016,"BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY","10.1007/s00265-016-2215-y","yes","yes",NA,"yes","both","yes","yes","unclear","no"
-"APR202",2016,"BEHAVIORAL ECOLOGY","10.1093/beheco/arw090","yes","yes",NA,"yes","both","no","no",NA,"yes"
-"APR205",2016,"BEHAVIOURAL PROCESSES","10.1016/j.beproc.2016.09.004","yes","yes",NA,"yes","both","yes","no",NA,"no"
-"APR209",2016,"BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY","10.1007/s00265-016-2193-0","yes","yes",NA,"yes","within","no","no",NA,"yes"
-"APR212",2016,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2016.08.009","yes","yes",NA,"yes","within","no","no",NA,"no"
-"APR214",2016,"BEHAVIORAL ECOLOGY","10.1093/beheco/arw054","yes","yes",NA,"yes","none",NA,"no",NA,"no"
-"APR227",2016,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2016.03.032","yes","yes",NA,"yes","both","no","yes","both","no"
-"APR229",2016,"ETHOLOGY","10.1111/eth.12491","yes","yes",NA,"yes","within","no","no",NA,"no"
-"APR235",2016,"BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY","10.1007/s00265-016-2089-z","yes","yes",NA,"yes","both","no","yes","none","no"
-"APR239",2016,"ETHOLOGY","10.1111/eth.12475","yes","yes",NA,"yes","within","yes","no",NA,"no"
-"APR244",2016,"CURRENT ZOOLOGY","10.1093/cz/zov001","yes","yes",NA,"yes","both","yes","yes","both","no"
-"APR247",2016,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2015.12.004","yes","yes",NA,"yes","within","no","no",NA,"yes"
-"APR251",2016,"BEHAVIOUR","10.1163/1568539X-00003375","yes","yes",NA,"yes","both","no","no",NA,"no"
-"APR254",2016,"BEHAVIOUR","10.1163/1568539X-00003408","yes","yes",NA,"yes","within","no","no",NA,"no"
-"APR265",2016,"BEHAVIOUR","10.1163/1568539X-00003343","yes","yes",NA,"yes","both","yes","no",NA,"no"
-"APR272",2016,"ETHOLOGY","10.1111/eth.12448","yes","yes",NA,"yes","both","no","yes","both","no"
-"APR274",2015,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2015.09.024","yes","yes",NA,"yes","within","yes","no",NA,"yes"
-"APR277",2015,"PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES","10.1098/rspb.2015.1768","yes","yes",NA,"yes","both","no","no",NA,"no"
-"APR287",2015,"BEHAVIORAL ECOLOGY","10.1093/beheco/arv079","yes","yes",NA,"yes","both","no","yes","none","yes"
-"APR293",2015,"BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY","10.1007/s00265-015-1947-4","yes","yes",NA,"yes","both","yes","no",NA,"no"
-"APR296",2015,"BEHAVIORAL ECOLOGY","10.1093/beheco/arv048","yes","yes",NA,"yes","both","no","yes","both","yes"
-"APR301",2015,"PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES","10.1098/rspb.2015.0708","yes","yes",NA,"yes","both","no","yes","both","yes"
-"APR312",2015,"BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY","10.1007/s00265-015-1915-z","yes","yes",NA,"yes","both","yes","no",NA,"no"
-"APR313",2015,"BEHAVIORAL ECOLOGY","10.1093/beheco/arv030","yes","yes",NA,"yes","within","yes","no",NA,"no"
-"APR321",2015,"BEHAVIORAL ECOLOGY","10.1093/beheco/arv003","yes","yes",NA,"yes","both","yes","no",NA,"no"
-"APR322",2015,"ANIMAL BEHAVIOUR","10.1016/j.anbehav.2014.12.020","yes","yes",NA,"yes","both","no","yes","both","yes"
-"APR336",2015,"BEHAVIORAL ECOLOGY","10.1093/beheco/aru186","yes","yes",NA,"yes","both","no","no",NA,"no"
-"APR340",2015,"ETHOLOGY","10.1111/eth.12318","yes","yes",NA,"yes","both","no","no",NA,"no"
+studyID,year,journal,url,t.and.a_decision,fulltext_decision,fulltext_exclusion_reason,repeatability,repeatability_interpretation,repeatability_consist_predict,repetability_comparison,repetability_comparison_interpretation,unstandardize_variance.2
+APR006,2019,BEHAVIORAL ECOLOGY,10.1093/beheco/ary178,yes,yes,NA,yes,unclear,unclear,unclear,NA,yes
+APR039,2018,ETHOLOGY,10.1111/eth.12770,yes,yes,NA,yes,within,yes,yes,within,yes
+APR055,2018,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2018.04.023,yes,yes,NA,yes,both,yes,no,NA,yes
+APR064,2018,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2018.02.013,yes,yes,NA,yes,both,yes,yes,both,yes
+APR079,2018,CURRENT ZOOLOGY,10.1093/cz/zox008,yes,yes,NA,yes,both,yes,no,NA,no
+APR086,2018,BEHAVIOUR,10.1163/1568539X-00003500,yes,yes,NA,yes,both,no,no,NA,no
+APR089,2018,BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY,10.1007/s00265-017-2428-8,yes,yes,NA,yes,within,yes,no,NA,no
+APR097,2017,PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES,10.1098/rspb.2017.1893,yes,yes,NA,yes,both,yes,no,NA,yes
+APR103,2017,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2017.08.027,yes,yes,NA,yes,within,no,no,NA,yes
+APR106,2017,PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES,10.1098/rspb.2017.0943,yes,yes,NA,yes,both,yes,yes,both,yes
+APR108,2017,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2017.08.010,yes,yes,NA,yes,within,yes,no,NA,no
+APR133,2017,BEHAVIORAL ECOLOGY,10.1093/beheco/arx070,yes,yes,NA,yes,among,no,no,NA,no
+APR155,2017,PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES,10.1098/rspb.2016.2872,yes,yes,NA,yes,within,yes,no,NA,no
+APR163,2017,BEHAVIORAL ECOLOGY,10.1093/beheco/arw174,yes,yes,NA,yes,both,yes,no,NA,no
+APR186,2017,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2016.10.006,yes,yes,NA,yes,both,no,no,NA,no
+APR195,2016,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2016.10.001,yes,yes,NA,yes,none,NA,no,NA,no
+APR203,2016,BEHAVIORAL ECOLOGY,10.1093/beheco/arw094,yes,yes,NA,yes,both,no,no,NA,yes
+APR223,2016,BEHAVIORAL ECOLOGY,10.1093/beheco/arw037,yes,yes,NA,yes,both,no,no,NA,yes
+APR270,2016,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2015.10.032,yes,yes,NA,yes,both,yes,yes,within,no
+APR279,2015,BEHAVIORAL ECOLOGY,10.1093/beheco/arv101,yes,yes,NA,yes,among,no,no,NA,no
+APR315,2015,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2015.02.007,yes,yes,NA,yes,both,yes,no,NA,no
+APR004,2019,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2019.02.009,yes,yes,NA,yes,both,yes,no,NA,no
+APR005,2019,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2019.02.016,yes,yes,NA,yes,both,no,yes,among,no
+APR012,2019,CURRENT ZOOLOGY,10.1093/cz/zoy021,yes,yes,NA,yes,both,no,no,NA,no
+APR015,2019,BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY,10.1007/s00265-019-2637-4,yes,yes,NA,yes,both,yes,no,NA,no
+APR019,2019,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2018.11.007,yes,yes,NA,yes,both,no,no,NA,no
+APR020,2018,BEHAVIOURAL PROCESSES,10.1016/j.beproc.2018.08.009,yes,yes,NA,yes,both,yes,no,NA,no
+APR031,2018,CURRENT ZOOLOGY,10.1093/cz/zox053,yes,yes,NA,yes,both,no,no,NA,no
+APR041,2018,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2018.06.009,yes,yes,NA,yes,within,yes,no,NA,no
+APR046,2018,ETHOLOGY,10.1111/eth.12766,yes,yes,NA,yes,both,yes,yes,within,yes
+APR052,2018,BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY,10.1007/s00265-018-2520-8,yes,yes,NA,yes,both,no,no,NA,no
+APR061,2018,ETHOLOGY,10.1111/eth.12735,yes,yes,NA,yes,both,no,no,NA,no
+APR062,2018,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2018.01.022,yes,yes,NA,yes,among,no,no,NA,yes
+APR067,2018,BEHAVIOURAL PROCESSES,10.1016/j.beproc.2018.02.003,yes,yes,NA,yes,both,no,no,NA,yes
+APR073,2018,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2018.01.011,yes,yes,NA,yes,among,no,no,NA,no
+APR074,2018,PLOS ONE,10.1371/journal.pone.0193425,yes,yes,NA,yes,both,yes,yes,none,no
+APR083,2018,BEHAVIOUR,10.1163/1568539X-00003522,yes,yes,NA,yes,both,yes,no,NA,yes
+APR084,2018,BEHAVIOUR,10.1163/1568539X-00003509,yes,yes,NA,yes,both,yes,no,NA,no
+APR085,2018,BEHAVIOUR,10.1163/1568539X-00003483,yes,yes,NA,yes,both,no,no,NA,no
+APR096,2018,ETHOLOGY,10.1111/eth.12704,yes,yes,NA,yes,within,no,no,NA,no
+APR117,2017,BEHAVIOURAL PROCESSES,10.1016/j.beproc.2017.06.006,yes,yes,NA,yes,both,yes,no,NA,no
+APR118,2017,BEHAVIOURAL PROCESSES,10.1016/j.beproc.2017.06.002,yes,yes,NA,yes,within,yes,yes,within,no
+APR119,2017,ETHOLOGY,10.1111/eth.12639,yes,yes,NA,yes,both,yes,no,NA,no
+APR122,2017,PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES,10.1098/rspb.2017.0893,yes,yes,NA,yes,both,yes,no,NA,yes
+APR130,2017,BEHAVIOURAL PROCESSES,10.1016/j.beproc.2017.02.017,yes,yes,NA,yes,both,yes,no,NA,no
+APR135,2017,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2017.05.013,yes,yes,NA,yes,both,no,yes,none,no
+APR152,2017,BEHAVIORAL ECOLOGY,10.1093/beheco/arx013,yes,yes,NA,yes,both,no,no,NA,yes
+APR158,2017,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2017.02.004,yes,yes,NA,yes,within,yes,no,NA,no
+APR166,2017,BEHAVIOURAL PROCESSES,10.1016/j.beproc.2016.12.011,yes,yes,NA,yes,both,no,no,NA,no
+APR173,2017,BEHAVIOUR,10.1163/1568539X-00003433,yes,yes,NA,yes,within,yes,yes,unclear,no
+APR177,2017,BEHAVIORAL ECOLOGY,10.1093/beheco/arw164,yes,yes,NA,yes,both,yes,yes,both,yes
+APR180,2017,BEHAVIOURAL PROCESSES,10.1016/j.beproc.2016.07.001,yes,yes,NA,yes,within,yes,no,NA,yes
+APR182,2017,BEHAVIOURAL PROCESSES,10.1016/j.beproc.2016.07.006,yes,yes,NA,yes,within,no,no,NA,no
+APR185,2017,BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY,10.1007/s00265-016-2257-1,yes,yes,NA,yes,both,no,yes,among,no
+APR187,2017,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2016.10.017,yes,yes,NA,yes,within,yes,yes,within,no
+APR188,2017,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2016.09.005,yes,yes,NA,yes,both,no,yes,within,no
+APR190,2017,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2016.11.014,yes,yes,NA,yes,both,yes,yes,none,yes
+APR193,2016,PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES,10.1098/rspb.2016.1409,yes,yes,NA,yes,unclear,unclear,no,NA,no
+APR196,2016,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2016.09.024,yes,yes,NA,yes,both,no,no,NA,no
+APR197,2016,BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY,10.1007/s00265-016-2206-z,yes,yes,NA,yes,both,no,no,NA,yes
+APR200,2016,BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY,10.1007/s00265-016-2215-y,yes,yes,NA,yes,both,yes,yes,unclear,no
+APR202,2016,BEHAVIORAL ECOLOGY,10.1093/beheco/arw090,yes,yes,NA,yes,both,no,no,NA,yes
+APR205,2016,BEHAVIOURAL PROCESSES,10.1016/j.beproc.2016.09.004,yes,yes,NA,yes,both,yes,no,NA,no
+APR209,2016,BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY,10.1007/s00265-016-2193-0,yes,yes,NA,yes,within,no,no,NA,yes
+APR212,2016,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2016.08.009,yes,yes,NA,yes,within,no,no,NA,no
+APR214,2016,BEHAVIORAL ECOLOGY,10.1093/beheco/arw054,yes,yes,NA,yes,none,NA,no,NA,no
+APR227,2016,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2016.03.032,yes,yes,NA,yes,both,no,yes,both,no
+APR229,2016,ETHOLOGY,10.1111/eth.12491,yes,yes,NA,yes,within,no,no,NA,no
+APR235,2016,BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY,10.1007/s00265-016-2089-z,yes,yes,NA,yes,both,no,yes,none,no
+APR239,2016,ETHOLOGY,10.1111/eth.12475,yes,yes,NA,yes,within,yes,no,NA,no
+APR244,2016,CURRENT ZOOLOGY,10.1093/cz/zov001,yes,yes,NA,yes,both,yes,yes,both,no
+APR247,2016,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2015.12.004,yes,yes,NA,yes,within,no,no,NA,yes
+APR251,2016,BEHAVIOUR,10.1163/1568539X-00003375,yes,yes,NA,yes,both,no,no,NA,no
+APR254,2016,BEHAVIOUR,10.1163/1568539X-00003408,yes,yes,NA,yes,within,no,no,NA,no
+APR265,2016,BEHAVIOUR,10.1163/1568539X-00003343,yes,yes,NA,yes,both,yes,no,NA,no
+APR272,2016,ETHOLOGY,10.1111/eth.12448,yes,yes,NA,yes,both,no,yes,both,no
+APR274,2015,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2015.09.024,yes,yes,NA,yes,within,yes,no,NA,yes
+APR277,2015,PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES,10.1098/rspb.2015.1768,yes,yes,NA,yes,both,no,no,NA,no
+APR287,2015,BEHAVIORAL ECOLOGY,10.1093/beheco/arv079,yes,yes,NA,yes,both,no,yes,none,yes
+APR293,2015,BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY,10.1007/s00265-015-1947-4,yes,yes,NA,yes,both,yes,no,NA,no
+APR296,2015,BEHAVIORAL ECOLOGY,10.1093/beheco/arv048,yes,yes,NA,yes,both,no,yes,both,yes
+APR301,2015,PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES,10.1098/rspb.2015.0708,yes,yes,NA,yes,both,no,yes,both,yes
+APR312,2015,BEHAVIORAL ECOLOGY AND SOCIOBIOLOGY,10.1007/s00265-015-1915-z,yes,yes,NA,yes,both,yes,no,NA,no
+APR313,2015,BEHAVIORAL ECOLOGY,10.1093/beheco/arv030,yes,yes,NA,yes,within,yes,no,NA,no
+APR321,2015,BEHAVIORAL ECOLOGY,10.1093/beheco/arv003,yes,yes,NA,yes,both,yes,no,NA,no
+APR322,2015,ANIMAL BEHAVIOUR,10.1016/j.anbehav.2014.12.020,yes,yes,NA,yes,both,no,yes,both,yes
+APR336,2015,BEHAVIORAL ECOLOGY,10.1093/beheco/aru186,yes,yes,NA,yes,both,no,no,NA,no
+APR340,2015,ETHOLOGY,10.1111/eth.12318,yes,yes,NA,yes,both,no,no,NA,no
