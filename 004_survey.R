@@ -18,7 +18,7 @@
 # Packages needed
 ################################################################################
 
-pacman::p_load(openxlsx,stringr,dplyr,tidyverse,gt)
+pacman::p_load(openxlsx,stringr,dplyr,tidyverse,gt,binom)
 
 # Clear memory
 rm(list=ls())
