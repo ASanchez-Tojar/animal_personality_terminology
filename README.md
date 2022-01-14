@@ -4,7 +4,7 @@ This repository contains all materials used for a project using a self-report qu
 
 ---
 
-Alfredo Sánchez-Tójar, Maria Moiron, Petri T. Niemelä. In preparation. *Ambiguous terminology in animal personality research: a self-report questionnaire and a systematic review*. DOI: tba
+Alfredo Sánchez-Tójar, Maria Moiron, Petri T. Niemelä. Accepted. *Terminology use in animal personality research: a self-report questionnaire and a systematic review*. Proceedings of the Royal Society B. DOI: 10.1098/rspb.2021.2259
 
 * All authors contributed equally to this work
 
@@ -37,4 +37,4 @@ All R code is available in the main folder and scripts are numbered in order of 
 
 See details of the licence of this repository in [LICENSE.txt] (tba)
 
-If you have troubbles importing some of the datasets, particularly if you are using Windows, it might be because the path names are longer than allowed by Windows. If that is the case, try and copy the entire folder (i.e. animal_personality_terminology) to your Desktop and running the code from there. We did not think of this character limit when trying to name files as self-explanatory as possible. Sincere apologies for these.
+If you have troubbles importing some of the datasets, particularly if you are using Windows, it might be because the path names are longer than allowed by Windows. If that is the case, try and copy the entire folder (i.e. animal_personality_terminology) to your Desktop and running the code from there. We did not think of this character limit when naming the files as self-explanatory as possible. Sincere apologies for any inconveniences this may cause.
