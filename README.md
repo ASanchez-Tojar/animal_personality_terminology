@@ -4,7 +4,7 @@ This repository contains all materials used for a project using a self-report qu
 
 ---
 
-Alfredo Sánchez-Tójar, Maria Moiron, Petri T. Niemelä. Accepted. *Terminology use in animal personality research: a self-report questionnaire and a systematic review*. Proceedings of the Royal Society B. DOI: 10.1098/rspb.2021.2259
+Alfredo Sánchez-Tójar, Maria Moiron, Petri T. Niemelä. *Accepted*. **Terminology use in animal personality research: a self-report questionnaire and a systematic review**. *Proceedings of the Royal Society B*. DOI: 10.1098/rspb.2021.2259
 
 * All authors contributed equally to this work
 
