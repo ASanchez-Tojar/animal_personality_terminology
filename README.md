@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5848521.svg)](https://doi.org/10.5281/zenodo.5848521)
+
 # Animal personality terminology
 
 This repository contains all materials used for a project using a self-report questionnaire and a systematic review to understand how animal personality terminology is used and interpreted. Specifically, the repository contains all R code and data used in the following study:
